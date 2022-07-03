@@ -14,24 +14,17 @@ function App() {
     <div className="App">
       {/* <h1>Lets Gooooo!༼ つ ◕_◕ ༽つ(╯°□°）╯︵ ┻━┻</h1> */}
       <Header />
-      <Router>
-        <Routes>
-          {/* <div className="app_page"> */}
-          <Route
-            path="/"
-            element={[
-              <>
-                <Sidebar />, <RecommendedVideos />
-              </>,
-            ]}
-          />
-          <Route
-            path="/search/:searchTerm"
-            element={[<Sidebar />, <SearchPage />]}
-          />
-          {/* </div> */}
-        </Routes>
-      </Router>
+      <div className="app_page">
+        <Router>
+          <Routes>
+            <Route path="/" element={[<Sidebar />, <RecommendedVideos />]} />
+            <Route
+              path="/search/:searchTerm"
+              element={[<Sidebar />, <SearchPage />]}
+            />
+          </Routes>
+        </Router>
+      </div>
     </div>
   );
 }
