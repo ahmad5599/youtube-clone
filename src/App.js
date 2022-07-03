@@ -12,17 +12,24 @@ function App() {
   return (
     //BEM naming convention
     <div className="App">
-      <h1>Lets Gooooo!༼ つ ◕_◕ ༽つ(╯°□°）╯︵ ┻━┻</h1>
+      {/* <h1>Lets Gooooo!༼ つ ◕_◕ ༽つ(╯°□°）╯︵ ┻━┻</h1> */}
+      <Header />
       <Router>
-        <Header />
         <Routes>
-          <div className="app_page">
-            <Route path="/" element={[<Sidebar />, <SearchPage />]} />
-            <Route
-              path="/search/:searchTerm"
-              element={[<Sidebar />, <RecommendedVideos />]}
-            />
-          </div>
+          {/* <div className="app_page"> */}
+          <Route
+            path="/"
+            element={[
+              <>
+                <Sidebar />, <RecommendedVideos />
+              </>,
+            ]}
+          />
+          <Route
+            path="/search/:searchTerm"
+            element={[<Sidebar />, <SearchPage />]}
+          />
+          {/* </div> */}
         </Routes>
       </Router>
     </div>

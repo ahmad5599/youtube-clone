@@ -15,13 +15,13 @@ function Header() {
     <div className="header">
       <div className="header_left">
         <MenuIcon />
-        <link to="/">
+        <a href="/">
           <img
             className="header_logo"
             src="https://www.clipartmax.com/png/full/109-1095050_youtube-logo-youtube-logo-2017.png "
             alt=""
           />
-        </link>
+        </a>
       </div>
 
       <div className="header_input">
@@ -31,9 +31,9 @@ function Header() {
           type="text"
           placeholder="Search"
         />
-        <link to={`/search/${inputSearch}`}>
+        <a href={`/search/${inputSearch}`}>
           <SearchIcon className="header_inputBtn" />
-        </link>
+        </a>
       </div>
 
       <div className="header_icons">
